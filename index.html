@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BD Football League</title>
+    <link rel="icon" href="img/title/logo1.png" />
+
+    <!-- ------------------------ tailwind link --------------------------  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {},
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-zinc-900">
+    <!-- ------------------------ header section --------------------------  -->
+    <header class="bg-black">
+      <div class="float-right pt-52">
+        <img src="img/banner/soccer-goal.png" alt="" />
+      </div>
+      <section class="text-white h-96 text-center align-middle py-24">
+        <h2 class="text-7xl pb-5">
+          Welcome to
+          <span class="text-green-800">Bangladesh Football League</span>
+        </h2>
+        <h2 class="text-7xl">
+          Select <span class="text-red-800">Top 5</span> Player from below
+        </h2>
+      </section>
+    </header>
+
+    <!-- ------------------------ content --------------------------  -->
+    <section class="mt-24 px-48 grid grid-cols-4">
+      <!-- ------------------------ all player card for selection --------------------------  -->
+      <section class="col-span-3 grid grid-cols-3 gap-5">
+        <div class="bg-black text-center border-2 border-gray-700">
+          <div>
+            <img class="w-full" src="img/player-card/messi.png" alt="" />
+          </div>
+
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Lionel Messi</h2>
+            <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
+          </div>
+
+          <div>
+            <button
+              class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black text-center border-2 border-gray-700">
+          <div>
+            <img class="w-full" src="img/player-card/neymar.png" alt="" />
+          </div>
+
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Neymar Jr</h2>
+            <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
+          </div>
+
+          <div>
+            <button
+              class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black text-center border-2 border-gray-700">
+          <div>
+            <img class="w-full" src="img/player-card/mbappe.png" alt="" />
+          </div>
+
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Kylian Mbappé</h2>
+            <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
+          </div>
+
+          <div>
+            <button
+              class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black text-center border-2 border-gray-700">
+          <div>
+            <img class="w-full" src="img/player-card/machado.png" alt="" />
+          </div>
+
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Vítor Machado</h2>
+            <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
+          </div>
+
+          <div>
+            <button
+              class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black text-center border-2 border-gray-700">
+          <div>
+            <img class="w-full" src="img/player-card/ramos.png" alt="" />
+          </div>
+
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Sergio Ramos</h2>
+            <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
+          </div>
+
+          <div>
+            <button
+              class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black text-center border-2 border-gray-700">
+          <div>
+            <img class="w-full" src="img/player-card/sanches.png" alt="" />
+          </div>
+
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Renato Sanches</h2>
+            <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
+          </div>
+
+          <div>
+            <button
+              class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------ selected player and calculation --------------------------  -->
+      <section class="mx-5">
+        <!-- ------------------------ selected player --------------------------  -->
+        <section class="bg-black text-center px-5">
+          <div class="">
+            <h2 class="text-white text-4xl py-10">Selected - 5</h2>
+          </div>
+          <div class="text-gray-600 text-left font-semibold text-2xl pb-10">
+            <ul>
+              <li class="py-2">1.<span id="" class="px-7"></span></li>
+              <li class="py-2">2.<span id="" class="px-7"></span></li>
+              <li class="py-2">3.<span id="" class="px-7"></span></li>
+              <li class="py-2">4.<span id="" class="px-7"></span></li>
+              <li class="py-2">5.<span id="" class="px-7"></span></li>
+            </ul>
+          </div>
+        </section>
+        <!-- ------------------------ bufget calculation --------------------------  -->
+        <section class="text-white bg-black mt-5 text-center px-5">
+          <h2 class="text-4xl py-10">Budget</h2>
+
+          <div class="flex pb-5">
+            <p class="flex-1 text-2xl py-2 text-gray-500">Per Player</p>
+            <input
+              type="number"
+              class="border-2 border-white bg-inherit flex-1 text-2xl w-5 py-2"
+            />
+          </div>
+
+          <button class="text-2xl bg-blue-900 py-2 px-10">Calculate</button>
+
+          <div class="flex py-5">
+            <p class="flex-1 text-xl text-gray-500">Player Expenses</p>
+            <p class="flex-1 text-xl">$<span>0</span></p>
+          </div>
+
+          <div class="flex py-5">
+            <p class="flex-1 text-2xl py-2 text-gray-500">Manager</p>
+            <input
+              type="number"
+              class="border-2 border-white bg-inherit flex-1 text-2xl w-5 py-2"
+            />
+          </div>
+
+          <div class="flex my-5">
+            <p class="flex-1 text-2xl py-2 text-gray-500">Coach</p>
+            <input
+              type="number"
+              class="border-2 border-white bg-inherit flex-1 text-2xl w-5 py-2"
+            />
+          </div>
+
+          <button class="text-2xl bg-blue-900 py-2 px-10 mt-5">
+            Calculate Total
+          </button>
+
+          <div class="flex py-5">
+            <p class="flex-1 text-gray-500 text-2xl">Total</p>
+            <p class="flex-1 text-orange-500 text-2xl">$<span>0</span></p>
+          </div>
+        </section>
+      </section>
+    </section>
+    
+    <!-- ------------------------ footer section --------------------------  -->
+    <footer class="text-center text-white mt-48">
+      <hr>
+      <p class="text-xl py-20">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
+
+    <!-- ------------------------ java script attachment --------------------------  -->
+  </body>
+</html>
