@@ -13,3 +13,7 @@ function budgetCalculation() {
     alert("Please select Players from the list");
   }
 }
+
+function totalPlayerCostValue() {
+  return totalPlayerCost;
+}
