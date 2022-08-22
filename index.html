@@ -42,18 +42,19 @@
       <!-- ------------------------ all player card for selection --------------------------  -->
       <section class="col-span-3 grid grid-cols-3 gap-5">
         <!-- ------------------------ Messi --------------------------  -->
-        <div id="btn-messi" class="bg-black text-center border-2 border-gray-700">
+        <div class="bg-black text-center border-2 border-gray-700">
           <div>
             <img class="w-full" src="img/player-card/messi.png" alt="" />
           </div>
-
-          <div  class="py-5">
-            <h2 id="name-messi"  class="text-white text-3xl py-2">Lionel Messi</h2>
+          
+          <div class="py-5">
+            <h2 class="text-white text-3xl py-2">Lionel Messi</h2>
             <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
           </div>
 
           <div>
-            <button 
+            <button id="btn-messi"
+              onclick="this.disabled=updateSelectedList('. Lionel Messi', 'btn-messi' ); "
               class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
             >
               SELECT
@@ -67,12 +68,13 @@
           </div>
 
           <div class="py-5">
-            <h2 id="name-neymar" class="text-white text-3xl py-2">Neymar Jr</h2>
+            <h2 class="text-white text-3xl py-2">Neymar Jr</h2>
             <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
           </div>
 
           <div>
-            <button 
+            <button id="btn-neymar"
+              onclick="this.disabled=updateSelectedList('. Neymar Jr', 'btn-neymar');"
               class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
             >
               SELECT
@@ -86,12 +88,13 @@
           </div>
 
           <div class="py-5">
-            <h2 id="name-mbappe" class="text-white text-3xl py-2">Kylian Mbappé</h2>
+            <h2 class="text-white text-3xl py-2">Kylian Mbappé</h2>
             <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
           </div>
 
           <div>
-            <button 
+            <button id="btn-mbappe"
+              onclick="this.disabled=updateSelectedList('. Kylian Mbappé','btn-mbappe');"
               class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
             >
               SELECT
@@ -105,12 +108,13 @@
           </div>
 
           <div class="py-5">
-            <h2 id="name-machado" class="text-white text-3xl py-2">Vítor Machado</h2>
+            <h2 class="text-white text-3xl py-2">Vítor Machado</h2>
             <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
           </div>
 
           <div>
-            <button 
+            <button id="btn-machado"
+              onclick="this.disabled=updateSelectedList('. Vítor Machado', 'btn-machado');"
               class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
             >
               SELECT
@@ -124,12 +128,13 @@
           </div>
 
           <div class="py-5">
-            <h2 id="name-ramos" class="text-white text-3xl py-2">Sergio Ramos</h2>
+            <h2 class="text-white text-3xl py-2">Sergio Ramos</h2>
             <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
           </div>
 
           <div>
-            <button 
+            <button id="btn-ramos"
+              onclick="this.disabled=updateSelectedList('. Sergio Ramos', 'btn-ramos');"
               class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
             >
               SELECT
@@ -143,12 +148,13 @@
           </div>
 
           <div class="py-5">
-            <h2 id="name-sanches" class="text-white text-3xl py-2">Renato Sanches</h2>
+            <h2 class="text-white text-3xl py-2">Renato Sanches</h2>
             <p class="text-gray-500 text-xl">36 Goals 120 Assist</p>
           </div>
 
           <div>
-            <button 
+            <button id="btn-sanches"
+              onclick="this.disabled=updateSelectedList('. Renato Sanches', 'btn-sanches');"
               class="bg-blue-900 text-white px-20 py-2 mb-10 text-xl font-semibold"
             >
               SELECT
@@ -162,16 +168,10 @@
         <!-- ------------------------ selected player --------------------------  -->
         <section class="bg-black text-center px-5">
           <div class="">
-            <h2 class="text-white text-4xl py-10">Selected - 5</h2>
+            <h2 class="text-white text-4xl py-10">Selected - V</h2>
           </div>
           <div class="text-gray-600 text-left font-semibold text-2xl pb-10">
-            <ul>
-              <li class="py-2">1.<span id="player-list-1" class="px-7"></span></li>
-              <li class="py-2">2.<span id="player-list-2" class="px-7"></span></li>
-              <li class="py-2">3.<span id="player-list-3" class="px-7"></span></li>
-              <li class="py-2">4.<span id="player-list-4" class="px-7"></span></li>
-              <li class="py-2">5.<span id="player-list-5" class="px-7"></span></li>
-            </ul>
+            <ol id="player-list" class="px-10 "></ol>
           </div>
         </section>
         <!-- ------------------------ budget calculation --------------------------  -->
@@ -180,22 +180,22 @@
 
           <div class="flex pb-5">
             <p class="flex-1 text-2xl py-2 text-gray-500">Per Player</p>
-            <input
+            <input id="per-player-cost"
               type="number"
               class="border-2 border-white bg-inherit flex-1 text-2xl w-5 py-2"
             />
           </div>
 
-          <button class="text-2xl bg-blue-900 py-2 px-10">Calculate</button>
+          <button onclick="budgetCalculation()" class="text-2xl bg-blue-900 py-2 px-10">Calculate</button>
 
           <div class="flex py-5">
             <p class="flex-1 text-xl text-gray-500">Player Expenses</p>
-            <p class="flex-1 text-xl">$<span>0</span></p>
+            <p class="flex-1 text-xl">$<span id="total-player-cost">0</span></p>
           </div>
 
           <div class="flex py-5">
             <p class="flex-1 text-2xl py-2 text-gray-500">Manager</p>
-            <input
+            <input id="manager-cost"
               type="number"
               class="border-2 border-white bg-inherit flex-1 text-2xl w-5 py-2"
             />
@@ -203,7 +203,7 @@
 
           <div class="flex my-5">
             <p class="flex-1 text-2xl py-2 text-gray-500">Coach</p>
-            <input
+            <input id="coach-cost"
               type="number"
               class="border-2 border-white bg-inherit flex-1 text-2xl w-5 py-2"
             />
@@ -215,7 +215,7 @@
 
           <div class="flex py-5">
             <p class="flex-1 text-gray-500 text-2xl">Total</p>
-            <p class="flex-1 text-orange-500 text-2xl">$<span>0</span></p>
+            <p class="flex-1 text-orange-500 text-2xl">$<span id="total-cost">0</span></p>
           </div>
         </section>
       </section>
@@ -229,5 +229,6 @@
 
     <!-- ------------------------ java script attachment --------------------------  -->
     <script src="js/selection.js"></script>
+    <script src="js/budget.js"></script>
   </body>
 </html>
